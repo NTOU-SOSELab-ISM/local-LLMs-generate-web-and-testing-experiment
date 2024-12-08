@@ -1,18 +1,12 @@
 import React, { useState } from 'react';
 import '../styles/textInput.css';
 
-const TextInput = ({ onChangeText, onKeyPress }) => {
+const TextInput = ({ text, onInputChange }) => {
     const [inputText, setInputText] = useState('');
 
     const handleInputChange = (e) => {
         setInputText(e.target.value);
-        onChangeText(e.target.value);
-    };
-
-    const handleKeyDown = (e) => {
-        if (onKeyPress) {
-            onKeyPress(e.key);
-        }
+        onInputChange(e.target.value);
     };
 
     return (
@@ -21,7 +15,11 @@ const TextInput = ({ onChangeText, onKeyPress }) => {
                 type="text"
                 value={inputText}
                 onChange={handleInputChange}
-                onKeyDown={handleKeyDown}
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                        onInputChange(inputText);
+                    }
+                }}
             />
         </div>
     );
