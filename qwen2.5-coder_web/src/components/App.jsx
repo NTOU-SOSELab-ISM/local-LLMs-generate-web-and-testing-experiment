@@ -6,21 +6,14 @@ import ToggleButton from './ToggleButton';
 import '../styles/App.css';
 
 const App = () => {
-  const [text, setText] = useState('The quick brown fox jumps over the lazy dog');
+  const [text, setText] = useState('The quick brown fox jumps over the lazy dog. This is a longer text to practice typing.');
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [startTime, setStartTime] = useState(null);
   const [endTime, setEndTime] = useState(null);
+  const [inputText, setInputText] = useState('');
 
   const handleTextChange = (newText) => {
     setText(newText);
-  };
-
-  const handleAddText = () => {
-    // Implement add text functionality
-  };
-
-  const handleKeyPress = (key) => {
-    // Implement key press functionality
   };
 
   const startTimer = () => {
@@ -37,8 +30,7 @@ const App = () => {
       const elapsedTime = endTime - startTime;
       const wordsTyped = text.split(' ').length;
       const minutes = elapsedTime / 1000 / 60;
-      const wpm = Math.round(wordsTyped / minutes);
-      alert(`Completed in ${minutes.toFixed(2)} minutes with WPM: ${wpm}`);
+      alert(`Completed in ${minutes.toFixed(2)} minutes with WPM: ${Math.round(wordsTyped / minutes)}`);
     }
   };
 
@@ -49,9 +41,12 @@ const App = () => {
         <ToggleButton isDarkMode={isDarkMode} onToggle={() => setIsDarkMode(!isDarkMode)} />
       </header>
       <section>
-        <TextDisplay text={text} onStartTimer={startTimer} onStopTimer={stopTimer} />
-        <TextInput onChangeText={handleTextChange} onKeyPress={handleKeyPress} />
-        <Keyboard onKeyPress={handleKeyPress} />
+        <TextDisplay text={text} inputText={inputText} onStartTimer={startTimer} onStopTimer={stopTimer} />
+        <TextInput onChangeText={(newText) => {
+          handleTextChange(newText);
+          setInputText(newText); // 更新 inputText
+        }} onKeyPress={(key) => console.log(key)} />
+        <Keyboard onKeyPress={(key) => console.log(key)} />
       </section>
     </div>
   );

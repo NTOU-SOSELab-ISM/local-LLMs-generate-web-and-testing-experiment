@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import '../styles/textInput.css';
 
-const TextInput = ({ text, onInputChange }) => {
+const TextInput = ({ onChangeText }) => {
     const [inputText, setInputText] = useState('');
 
     const handleInputChange = (e) => {
         setInputText(e.target.value);
-        onInputChange(e.target.value);
+        if (typeof onChangeText === 'function') {
+            onChangeText(e.target.value);
+        }
     };
 
     return (
@@ -17,7 +19,9 @@ const TextInput = ({ text, onInputChange }) => {
                 onChange={handleInputChange}
                 onKeyDown={(e) => {
                     if (e.key === 'Enter') {
-                        onInputChange(inputText);
+                        if (typeof onChangeText === 'function') {
+                            onChangeText(inputText);
+                        }
                     }
                 }}
             />

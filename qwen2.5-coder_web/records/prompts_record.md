@@ -193,3 +193,121 @@ at TextDisplay (TextDisplay.jsx:5:33)
 ![alt text](image-1.png)
 
 ## prompt 6
+
+修正後出現以下錯誤:
+
+-   題目文本不見了
+    以下是目前的相關程式碼，修正錯誤後並給我五個完整的程式碼
+    `TextDisplay.jsx`
+    `textDisplay.css`
+    `TextInput.jsx`
+    `textInput.css`
+    `App.jsx`
+    `App.css`
+
+## result6
+
+只修正了 App.jsx
+
+```jsx
+import React, { useState } from "react";
+import Keyboard from "./Keyboard";
+import TextInput from "./TextInput";
+import TextDisplay from "./TextDisplay";
+import ToggleButton from "./ToggleButton";
+import "../styles/App.css";
+
+const App = () => {
+    const [text, setText] = useState(
+        "The quick brown fox jumps over the lazy dog"
+    );
+    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [startTime, setStartTime] = useState(null);
+    const [endTime, setEndTime] = useState(null);
+
+    const handleTextChange = (newText) => {
+        setText(newText);
+    };
+
+    const startTimer = () => {
+        setStartTime(Date.now());
+    };
+
+    const stopTimer = () => {
+        setEndTime(Date.now());
+        calculateWPM();
+    };
+
+    const calculateWPM = () => {
+        if (startTime && endTime) {
+            const elapsedTime = endTime - startTime;
+            const wordsTyped = text.split(" ").length;
+            const minutes = elapsedTime / 1000 / 60;
+            const wpm = Math.round(wordsTyped / minutes);
+            alert(
+                `Completed in ${minutes.toFixed(2)} minutes with WPM: ${wpm}`
+            );
+        }
+    };
+
+    return (
+        <div className={isDarkMode ? "dark-mode" : "light-mode"}>
+            <header>
+                <h1>Typing Practice</h1>
+                <ToggleButton
+                    isDarkMode={isDarkMode}
+                    onToggle={() => setIsDarkMode(!isDarkMode)}
+                />
+            </header>
+            <section>
+                <TextDisplay
+                    text={text}
+                    inputText={text}
+                    onStartTimer={startTimer}
+                    onStopTimer={stopTimer}
+                />
+                <TextInput
+                    onChangeText={handleTextChange}
+                    onKeyPress={(key) => console.log(key)}
+                />
+                <Keyboard onKeyPress={(key) => console.log(key)} />
+            </section>
+        </div>
+    );
+};
+
+export default App;
+```
+
+執行結果:
+![alt text](image-2.png)
+
+## prompts7
+
+修正後還是雖然有出現題目文本，但還是有以下錯誤:
+
+-   題目的文字應該要在輸入文字後去變換顏色，如果輸入和題目文本一樣的話，文字會變成綠色，如果輸入錯誤的話，文字會變成紅色，預設為黑色
+-   題目的文本長度太低了，應該要有一個較長的文本
+    以下是相關的程式碼，修正以上問題後給我完整的程式碼:
+    `TextDisplay.jsx`
+    `textDisplay.css`
+    `TextInput.jsx`
+    `textInput.css`
+    `App.jsx`
+    `App.css`
+
+## result7
+
+有語法錯誤:
+App.jsx:43
+Uncaught ReferenceError: inputText is not defined
+at App (App.jsx:43:45)
+
+## prompts8
+
+App.jsx 有語法錯誤:
+App.jsx:43
+Uncaught ReferenceError: inputText is not defined
+at App (App.jsx:43:45)
+
+修正後給我完整的程式碼
