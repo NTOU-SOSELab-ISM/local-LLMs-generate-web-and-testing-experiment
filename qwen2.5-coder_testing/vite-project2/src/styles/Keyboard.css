@@ -1,0 +1,47 @@
+/* src/styles/Keyboard.css */
+.keyboard {
+  margin-top: 2rem;
+  user-select: none;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.key {
+  width: 40px;
+  height: 40px;
+  margin: 0 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.key.space {
+  width: 200px;
+}
+
+.key.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* 修改暗色模式下的樣式 */
+.dark .key {
+  background-color: #333;
+  border-color: #666;
+  color: #fff;
+}
+
+.dark .key.active {
+  background-color: #6ddb71;  /* 更亮的綠色 */
+  color: #000;               /* 黑色文字確保可見性 */
+  border-color: #4CAF50;    /* 保持綠色邊框 */
+  box-shadow: 0 0 5px #4CAF50;  /* 添加發光效果 */
+}

@@ -1,0 +1,32 @@
+  /* src/styles/TextDisplay.css */
+  .text-display {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 2rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.05);
+    white-space: pre-wrap;
+  }
+  
+  .char {
+    color: #666;
+  }
+  
+  .char.correct {
+    color: #000;
+  }
+  
+  .char.incorrect {
+    color: #ff0000;
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+  
+  .dark .char {
+    color: #999;
+  }
+  
+  .dark .char.correct {
+    color: #fff;
+  }
+  

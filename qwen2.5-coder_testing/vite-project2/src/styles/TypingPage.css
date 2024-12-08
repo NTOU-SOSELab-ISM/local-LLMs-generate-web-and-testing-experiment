@@ -1,0 +1,30 @@
+/* src/styles/TypingPage.css */
+.typing-page {
+    min-height: 100vh;
+    padding: 2rem;
+    transition: all 0.3s ease;
+  }
+  
+  .typing-page.light {
+    background-color: #ffffff;
+    color: #333333;
+  }
+  
+  .typing-page.dark {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+  
+  .custom-text-btn {
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+
