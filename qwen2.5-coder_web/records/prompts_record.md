@@ -311,3 +311,54 @@ Uncaught ReferenceError: inputText is not defined
 at App (App.jsx:43:45)
 
 修正後給我完整的程式碼
+
+## result8
+
+替換掉`App.jsx`後的結果，就只有題目文本便長而已
+![alt text](image-3.png)
+
+## prompts9
+
+當我輸入文字時會有以下錯誤:
+Uncaught TypeError: onInputChange is not a function
+at handleInputChange (TextInput.jsx:9:9)
+
+並且還是有以下需求沒有達成:
+
+-   題目的文字應該要在輸入文字後去變換顏色，如果輸入和題目文本一樣的話，文字會變成綠色，如果輸入錯誤的話，文字會變成紅色，預設為黑色
+
+修正後給我完整的程式碼
+
+## result9
+
+又回到老問題了，只要一輸入文字題目文本就會消失
+![alt text](image-4.png)
+
+## prompts10
+
+修正後還是有以下錯誤:
+只要一在輸入文字區域輸入文字，題目的文字就會消失
+修正錯誤後並給我五個完整的程式碼
+
+## result10
+
+又出現了語法錯誤:
+App.jsx:43
+Uncaught ReferenceError: inputText is not defined
+at App (App.jsx:43:45)
+
+## prompts11
+
+App.jsx 有語法錯誤:
+App.jsx:43
+Uncaught ReferenceError: inputText is not defined
+at App (App.jsx:43:45)
+修正後給我完整的程式碼
+
+## result11
+
+結果題目文本又不見了
+
+![alt text](image-5.png)
+
+放棄...
