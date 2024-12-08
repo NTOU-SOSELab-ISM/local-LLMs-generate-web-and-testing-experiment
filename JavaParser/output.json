@@ -1,0 +1,16 @@
+{
+  "src/styles/App.css" : [ ],
+  "src/components/ToggleButton.jsx" : [ ],
+  "src/components/App.jsx" : [ "src/styles/App.css", "src/components/ToggleButton.jsx", "src/components/TextDisplay.jsx", "src/components/Keyboard.jsx", "src/components/TextInput.jsx" ],
+  "src/components/TextInput.jsx" : [ "src/styles/textInput.css" ],
+  "src/main.jsx" : [ "src/components/App.jsx" ],
+  "src/styles/textInput.css" : [ ],
+  "src/styles/keyboard.css" : [ ],
+  "src/styles/textDisplay.css" : [ ],
+  "src/components/TextDisplay.jsx" : [ "src/styles/textDisplay.css" ],
+  "index.html" : [ ],
+  "eslint.config.js" : [ ],
+  "src/components/Keyboard.jsx" : [ "src/styles/keyboard.css" ],
+  "src/pages/Index.jsx" : [ "src/components/App.jsx" ],
+  "vite.config.js" : [ ]
+}
