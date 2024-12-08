@@ -1,0 +1,22 @@
+.keyboard {
+    display: flex;
+    justify-content: center;
+}
+
+.key-row {
+    margin: 0.5rem;
+}
+
+.key {
+    width: 45px;
+    height: 45px;
+    margin: 0.1rem;
+    border: none;
+    background-color: #f1f1f1;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.key:hover {
+    background-color: #ddd;
+}

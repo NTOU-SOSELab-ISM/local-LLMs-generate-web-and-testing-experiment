@@ -1,0 +1,9 @@
+.text-display {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+}
+
+.text-display p {
+    font-size: 1.2em;
+}
