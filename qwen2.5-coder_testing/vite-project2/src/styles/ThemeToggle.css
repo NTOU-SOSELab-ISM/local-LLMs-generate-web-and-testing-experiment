@@ -1,0 +1,12 @@
+  /* src/styles/ThemeToggle.css */
+  .theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
