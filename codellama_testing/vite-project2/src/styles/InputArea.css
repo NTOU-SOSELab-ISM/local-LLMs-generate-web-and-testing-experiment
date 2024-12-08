@@ -1,0 +1,19 @@
+/* src/styles/InputArea.css */
+.input-area {
+  width: 100%;
+  max-width: 800px;
+  height: 100px;
+  padding: 1rem;
+  margin: 1rem auto;  /* 改為 auto 實現水平置中 */
+  font-size: 1.2rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  resize: none;
+  display: block;     /* 確保元素為區塊級元素 */
+}
+
+.dark .input-area {
+  background-color: #333;
+  color: #fff;
+  border-color: #666;
+}

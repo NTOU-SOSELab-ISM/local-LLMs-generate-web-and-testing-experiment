@@ -1,0 +1,33 @@
+.typing-area {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.typing-area input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: 2px solid #646cff;
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+}
+
+.dark .typing-area input {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+.typing-area input:focus {
+  outline: none;
+  border-color: #535bf2;
+}
+
+.typing-area input:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+
+.dark .typing-area input:disabled {
+  background-color: #1a1a1a;
+}
